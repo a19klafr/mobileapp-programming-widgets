@@ -20,9 +20,13 @@
             app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Hello World!"
+            android:textSize="40sp"
+            android:textAlignment="center"
+
+        />
 
     </LinearLayout>
 
