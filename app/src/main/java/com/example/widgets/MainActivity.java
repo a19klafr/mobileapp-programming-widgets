@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
     private String[] mntLocations = {"Alps","Alps","Alaska"};
-    private int[] mntHeights = {4478,4808,6190};
+    private String[] mntHeights = {"4478","4808","6190"};
 
     private ArrayList<String> listData = new ArrayList<>(Arrays.asList(mountainNames));
 
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         My_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(getApplicationContext(),"Mountaintop is located in: "+mntLocations[i],Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Mountaintop is located in: "+mntLocations[i]+" and is "+mntHeights[i]+" meters high.",Toast.LENGTH_LONG).show();
             }
         });
     }
