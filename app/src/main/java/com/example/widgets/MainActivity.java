@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,7 +34,23 @@ public class MainActivity extends AppCompatActivity {
         My_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(getApplicationContext(),"Mountaintop is located in: "+mntLocations[i]+" and is "+mntHeights[i]+" meters high.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Mountaintop is located in: "+mntLocations[i]+" and is "+mntHeights[i]+" meters high.",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button GM_btn = findViewById(R.id.GM_button);
+        GM_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "The sun is awake!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button GN_btn = findViewById(R.id.GN_button);
+        GN_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Don't let the bedbugs bite!", Toast.LENGTH_SHORT).show();
             }
         });
     }
